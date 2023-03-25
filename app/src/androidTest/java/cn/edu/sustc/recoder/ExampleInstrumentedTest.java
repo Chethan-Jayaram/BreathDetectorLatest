@@ -18,7 +18,6 @@ public class ExampleInstrumentedTest {
   /*      // Context of the app under test.
        // Context appContext = InstrumentationRegistry.getTargetContext();
         Context context = InstrumentationRegistry.getInstrumentation().getTargetContext();
-
         assertEquals("cn.edu.sustc.activity_recorder", context.getPackageName());*/
     }
 }
