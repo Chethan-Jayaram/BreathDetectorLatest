@@ -1,6 +1,7 @@
 package cn.edu.sustc.recoder.Activity;
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
 import android.graphics.Color;
@@ -16,7 +17,6 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -56,7 +56,7 @@ import static cn.edu.sustc.recoder.Utils.TrackPeak.distSeq;
 import static cn.edu.sustc.recoder.Utils.TrackPeak.distSeqPlot;
 import static cn.edu.sustc.recoder.Utils.xcorr.get_range;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
     private static final String TAG = "MainActivity";
     Uri selectedFile;
     Button startButton;

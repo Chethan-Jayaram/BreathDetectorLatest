@@ -1,10 +1,9 @@
 package cn.edu.sustc.recoder.Activity;
+import android.app.Activity;
 import android.media.AudioFormat;
 import android.media.MediaRecorder;
 import android.os.Bundle;
 import android.os.Environment;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -25,7 +24,7 @@ import omrecorder.Recorder;
 import omrecorder.WriteAction;
 
 
-public class PcmRecorderActivity extends AppCompatActivity {
+public class PcmRecorderActivity extends Activity {
     Recorder recorder;
     ImageView recordButton;
     CheckBox skipSilence;
@@ -34,7 +33,7 @@ public class PcmRecorderActivity extends AppCompatActivity {
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recorder);
-        getSupportActionBar().setTitle("Pcm Recorder");
+       // this.getSupportActionBar().setTitle("Pcm Recorder");
         setupRecorder();
         skipSilence = (CheckBox) findViewById(R.id.skipSilence);
         skipSilence.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -134,7 +133,8 @@ public class PcmRecorderActivity extends AppCompatActivity {
         );
     }
 
-    @NonNull private File file() {
+
+    private File file() {
         return new File(Environment.getExternalStorageDirectory(), "kailashdabhi.pcm");
     }
 }
